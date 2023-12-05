@@ -1,6 +1,11 @@
-axios.interceptors.response.use((response) => {
-    return response
+import { service } from './instance'
+// axios.interceptors.response.use((response) => {
+//     return response
+// })
+
+// 响应拦截器
+service.interceptors.response.use(resp => {
+    return resp
 })
 
-// 移除拦截器
-axios.interceptors.request.eject();
+export default service
